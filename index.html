@@ -1,103 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Us</title>
+<meta charset="UTF-8">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<!-- ✅ IMPORTANT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+<title>Mark Gosling</title>
 
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 420px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+body {
+  background: #000;
+  color: #e5e5e5;
+}
 
-    .form-group {
-      margin-bottom: 15px;
-    }
+/* HEADER */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 
-    label {
-      font-size: 14px;
-      display: block;
-      margin-bottom: 5px;
-    }
+/* MG LOGO */
+.logo-box {
+  background: #e50914;
+  color: white;
+  padding: 12px 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 16px;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
+/* MAIN LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
-    textarea {
-      min-height: 120px;
-    }
+/* LEFT SIDE */
+.left {
+  flex: 1;
+}
 
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #4f46e5;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+/* NAME */
+.name {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
 
-  </style>
+/* RED BAR */
+.bar-red {
+  color: #e50914;
+  margin-left: 3px;
+}
+
+/* WHITE BAR */
+.bar-white {
+  color: #ffffff;
+  margin-left: -12px;
+}
+
+/* CONTACT LIST */
+.contact-list {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-label {
+  width: 90px;
+  color: #aaa;
+  text-transform: lowercase;
+}
+
+.contact-separator {
+  color: #e50914;
+  width: 10px;
+}
+
+.contact-value {
+  color: #e5e5e5;
+}
+
+.contact-value a {
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  color: #e50914;
+}
+
+/* RIGHT SIDE */
+.right {
+  flex: 1;
+  max-width: 400px;
+}
+
+.form-container {
+  background: #111;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.form-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.form-subtext {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 4px;
+  color: white;
+}
+
+input:focus, textarea:focus {
+  border-color: #e50914;
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b20710;
+}
+
+/* ========================= */
+/*   RESPONSIVE SECTION      */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 120px 20px 40px;
+    text-align: center;
+  }
+
+  .left, .right {
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+
+@media (max-width: 768px) {
+
+.container {
+  flex-direction: column;
+  gap: 40px;
+  padding: 120px 20px 40px;
+  text-align: center;
+}
+
+.left, .right {
+  max-width: 100%;
+}
+
+.name {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+
+.contact-list {
+  display: grid;
+  gap: 15px;
+  justify-content: centre;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 120px 20px 1fr;
+  align-items: center;
+}
+
+.contact-label {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.contact-separator {
+  text-align: centre;
+}
+
+.contact-value {
+  text-align: left;
+  padding-left: 10px;
+}
+
+
+.right {
+  width: 100%;
+}
+
+}
+``
+
+  .right {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .header {
+    top: 15px;
+    left: 15px;
+  }
+
+  .logo-box {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  /* tighten bars slightly for mobile */
+  .bar-white {
+    margin-left: -8px;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Contact Us</h1>
+<!-- LOGO -->
+<div class="header">
+  <div class="logo-box">M | G</div>
+</div>
 
-    <!-- REPLACE THIS WITH YOUR FORM LINK -->
-    <form action="https://formspree.io/f/xredjzqb">
+<!-- MAIN -->
+<div class="container">
 
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" name="name" required>
+  <!-- LEFT SIDE -->
+  <div class="left">
+
+    <div class="name">
+      Mark Gosling
+      <span class="bar-red">|</span>
+      <span class="bar-white">|</span>
+    </div>
+
+    <div class="contact-list">
+
+      <div class="contact-row">
+        <div class="contact-label">linkedin</div>
+        <div class="contact-separator">|</div>
+        <div class="contact-value">
+          <a href="https://linkedin.com/in/mark-gosling-8315541" target="_blank">
+            mark gosling
+          </a>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" required>
+      <div class="contact-row">
+        <div class="contact-label">location</div>
+        <div class="contact-separator">|</div>
+        <div class="contact-value">birmingham uk</div>
       </div>
 
-      <div class="form-group">
-        <label>Message</label>
-        <textarea name="message" required></textarea>
-      </div>
-
-      <!-- Anti-spam protection -->
-      <input type="text" name="_gotcha" style="display:none">
-      <input type="hidden" name="_subject" value="New enquiry">
-
-      <button type="submit">Send Message</button>
-
-    </form>
+    </div>
   </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right">
+    <div class="form-container">
+
+      <div class="form-title">Need to contact me?</div>
+      <div class="form-subtext">Alternatively, use the form below</div>
+
+      <form action="https://formspree.io/f/xredjzqb">
+
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" required></textarea>
+        </div>
+
+        <!-- spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="New enquiry">
+
+        <button type="submit">Send</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
